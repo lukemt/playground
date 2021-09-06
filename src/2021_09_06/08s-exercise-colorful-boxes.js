@@ -32,6 +32,6 @@ shapes.forEach(shape => {
   box.style.height = '100px'
   box.style.backgroundColor = shape.color
   box.style.borderRadius = shape.radius
-  box.innerText = shape.text
+  box.textContent = shape.text
   body.appendChild(box)
 })
