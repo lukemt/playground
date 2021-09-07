@@ -97,5 +97,5 @@ const advancedArray = [
 
 const upperNames = advancedArray.map(object => object.namesUpper)
 console.log(upperNames);
-// ['HANS', 'PETER', 'ELFRIEDE', ...]
+// ['HANS', 'PETER', 'ELFRIEDE', 'ULF']
 
