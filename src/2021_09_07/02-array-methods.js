@@ -113,3 +113,35 @@ const erWords2 = wordsX.filter(word => {
   return startsWithEr
 })
 console.log(erWords2)
+
+////// filter with objects
+const shapes = [
+  {
+    color: 'red',
+    radius: '7px',
+  },
+  {
+    color: 'blue',
+    radius: '50%',
+  },
+  {
+    color: 'red',
+    radius: '50%',
+  },
+]
+
+const shapesOnlyRed = shapes.filter(shape => shape.color == 'red')
+console.log(shapesOnlyRed);
+
+// Result we would like:
+// const shapesOnlyRed = [
+//   {
+//     color: 'red',
+//     radius: '7px',
+//   },
+//   {
+//     color: 'red',
+//     radius: '50%',
+//   },
+// ]
+
