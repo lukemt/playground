@@ -72,23 +72,11 @@ const people = [
 // 3. Sort the inventors by birthdate, oldest to youngest
 
 // 4. Sort the inventors by years lived
+const sortedByAge = inventors.slice().sort((a, b) => {
+  const ageA = a.passed - a.year
+  const ageB = b.passed - b.year
+  return ageA - ageB
+})
 
 // 5. sort Exercise
 // Sort the people alphabetically by last name
-
-const data = [
-  'car',
-  'car',
-  'truck',
-  'truck',
-  'bike',
-  'walk',
-  'car',
-  'van',
-  'bike',
-  'walk',
-  'car',
-  'van',
-  'car',
-  'truck',
-]
