@@ -12,46 +12,70 @@
 </section>
 */
 
-// Rewrite of the HTML to use createElement() and appendChild()
-const cardSection = document.createElement('section');
-cardSection.classList.add('card');
-document.body.appendChild(cardSection); // TODO: Move to the end of the file
+function renderCard(cardData) {
+  console.log(cardData.question)
+  // Rewrite of the HTML to use createElement() and appendChild()
+  const cardSection = document.createElement('section')
+  cardSection.classList.add('card')
+  document.body.appendChild(cardSection) // TODO: Move to the end of the file
 
-const cardBookmark = document.createElement('button');
-cardBookmark.classList.add('card__bookmark');
-cardSection.appendChild(cardBookmark);
+  const cardBookmark = document.createElement('button')
+  cardBookmark.classList.add('card__bookmark')
+  cardBookmark.setAttribute('aria-label', 'Bookmark Card')
+  cardSection.appendChild(cardBookmark)
 
-const cardQuestion = document.createElement('h2');
-cardQuestion.classList.add('card__question');
-cardQuestion.textContent = 'What is the meaning of life?';
-cardSection.appendChild(cardQuestion);
+  const cardQuestion = document.createElement('h2')
+  cardQuestion.classList.add('card__question')
+  cardQuestion.textContent = cardData.question
+  cardSection.appendChild(cardQuestion)
 
-const cardButton = document.createElement('button');
-cardButton.classList.add('card__button');
-cardButton.textContent = 'Show answer';
-cardSection.appendChild(cardButton);
+  const cardButton = document.createElement('button')
+  cardButton.classList.add('card__button')
+  cardButton.textContent = 'Show answer'
+  cardSection.appendChild(cardButton)
 
-const cardAnswer = document.createElement('p');
-cardAnswer.classList.add('card__answer');
-cardAnswer.classList.add('card__answer--hidden');
-cardAnswer.textContent = '42';
-cardSection.appendChild(cardAnswer);
+  const cardAnswer = document.createElement('p')
+  cardAnswer.classList.add('card__answer')
+  cardAnswer.classList.add('card__answer--hidden')
+  cardAnswer.textContent = cardData.answer
+  cardSection.appendChild(cardAnswer)
 
-const cardTags = document.createElement('ul');
-cardTags.classList.add('tags');
-cardSection.appendChild(cardTags);
+  const cardTags = document.createElement('ul')
+  cardTags.classList.add('tags')
+  cardSection.appendChild(cardTags)
 
-const cardTag1 = document.createElement('li');
-cardTag1.classList.add('tags__item');
-cardTag1.textContent = 'Philosophy';
-cardTags.appendChild(cardTag1);
+  cardData.tags.forEach(tag => {
+    const cardTag = document.createElement('li')
+    cardTag.classList.add('tags__item')
+    cardTag.textContent = tag
+    cardTags.appendChild(cardTag)
+  })
+  // Hint: .forEach() for things with side effects
+  // cardData.tags.forEach(tag => {
+  //   console.log(tag)
+  // })
+  // .map() for changing the form of array elements
+  // const neu = cardData.tags.map(tag => {
+  //   return tag + "!"
+  // })
+}
 
-const cardTag2 = document.createElement('li');
-cardTag2.classList.add('tags__item');
-cardTag2.textContent = 'Literature';
-cardTags.appendChild(cardTag2);
+const cardDataExample = [
+  {
+    question: 'Age of Arthur',
+    answer: '42',
+    isBookmarked: true,
+    showAnswer: false,
+    tags: ['history', 'social'],
+  },
+  {
+    question: 'Weird Question',
+    answer: 'Weird answer',
+    isBookmarked: true,
+    showAnswer: false,
+    tags: ['history', 'social'],
+  },
+]
 
-const cardTag3 = document.createElement('li');
-cardTag3.classList.add('tags__item');
-cardTag3.textContent = 'Tricky';
-cardTags.appendChild(cardTag3);
+renderCard(cardDataExample[0])
+renderCard(cardDataExample[1])
