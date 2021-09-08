@@ -29,6 +29,11 @@
     - createElement() für jedes html-element
       - Bsp: document.createElement('section')
     - appendChild()
+  Steps:
+    1. Eine Funktion schreiben, die eine einzige Beispiel-Card rendert
+    1.1 Ohne Parameter
+    1.2 Mit Parameter (ein Objekt)
+    2. Eine Funktion schreiben die ein Array mit Objekten (mehrere Cards) rendern kann
 
 - Seiten-Aufrufe implementiern
   - Hint: use eventListener!
