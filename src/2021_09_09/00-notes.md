@@ -66,3 +66,17 @@
 - Rufe die Funktion `addQuestion` auf wenn das Create-Formular abgeschickt wird.
 - Rufe danach automatisch die `renderCards`-Funktionen auf.
 - Erwartung: Die neue Card sollte in der Home-Seite angezeigt werden.
+
+### Iteration 4: Bookmarks Toggle
+
+- Beim Anklicken eines Bookmark-Buttons, soll folgendes passieren:
+  - Auf Home-Seite: Das Bookmark Icon soll die Farbe ändern
+  - Auf Bookmarks-Seite: Die Question-Card soll aus der Liste entfernt werden
+- Steps:
+  1. Vergebe jedem eintrag in appData eine zusätzliche Property `id` und nummeriere die einträge durch, sodass jede Frage eine eindeutige ID hat.
+  2. Verändere die Funktion `renderCards(array)` so, dass die ID des Eintrags in den Bookmark-Button eingefügt wird. Benutze das Attribut `data-id` für die ID.
+  3. Erstelle eine Funktion mit dem Namen `attatchEventListeners`
+    - Bsp: `attatchEventListeners()`
+    - Diese Funktion soll allen Bookmark-Buttons Click-EventListeners hinzufügen
+    - Bsp: `document.querySelectorAll('.bookmark-button').forEach(button => button.addEventListener('click', () => {...} ))`
+    
