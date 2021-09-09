@@ -64,5 +64,5 @@
   - Schreibe vor dem Aufruf von `renderCards` einen Aufruf von `addQuestion` und gucke, ob sich die Card gerendert wird.
   - Erwartung: Die neue Card sollte in der Home-Seite angezeigt werden.
 - Rufe die Funktion `addQuestion` auf wenn das Create-Formular abgeschickt wird.
-- Rufe danaach `renderCards`-Funktionen auf.
+- Rufe danach automatisch die `renderCards`-Funktionen auf.
 - Erwartung: Die neue Card sollte in der Home-Seite angezeigt werden.
