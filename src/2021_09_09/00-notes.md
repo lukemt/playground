@@ -79,4 +79,20 @@
     - Bsp: `attatchEventListeners()`
     - Diese Funktion soll allen Bookmark-Buttons Click-EventListeners hinzufügen
     - Bsp: `document.querySelectorAll('.bookmark-button').forEach(button => button.addEventListener('click', () => {...} ))`
+  
     
+### Iteration 5: Show Answer 
+- Entweder 
+  - Css-Klassen anpassen
+- Oder
+  - Orginal-Array verändern
+  - neu rendern
+
+### Iteration 6: Local Storage
+- Implementation von Persistenz mit LocalStorage
+  - Bei Klick auf Bookmark
+    - alles Speichern
+  - Beim Laden der App
+    - Alle Daten wiederherstellen
+
+
